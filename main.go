@@ -4,7 +4,6 @@ import (
 	"encoding/csv"
 	"fmt"
 	"os"
-	"time"
 )
 
 const (
@@ -41,16 +40,6 @@ func readCSVFile() []CsvLine {
 }
 
 func main() {
-	// Record start & end times
-	// save start time
-	m := make(map[string]time.Time)
-	m["start_time"] = time.Now()
-
 	data := readCSVFile()
-
-	// save end time
-	m["end_time"] = time.Now()
-
 	fmt.Println(data)
-	// fmt.Println(m)
 }
